@@ -34,3 +34,18 @@ For more information about the KerboScript syntax, visit their [documentation
 page](http://ksp-kos.github.io/KOS_DOC/).
 
 ## Loading Ships and Scripts
+
+All of the craft files and kOS scripts can be found in episode directories for
+this repository. To use them in your own game, locate your Kerbal Space Program
+[root directory](http://wiki.kerbalspaceprogram.com/wiki/Root_directory), and
+copy the craft files into your savegame. The kOS scripts used will need to be
+placed in `Ships/Script` at the top of your root directory.
+
+## Questions and Contributions
+
+If you have any questions about the project, please feel free to to submit an
+[issue](https://github.com/gisikw/ksprogramming/issues).
+
+As the series continues, we'll likely be adding some shared KerboScript
+libraries to ensure we don't need to rewrite everything from scratch. As we
+reach that point, pull requests are very much encouraged!

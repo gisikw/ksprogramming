@@ -1,0 +1,17 @@
+// Orbit v1.0.0
+
+PRINT "Launching in 5s...".
+LOCK THROTTLE to 0.9.
+LOCK STEERING TO HEADING(90, 90).
+WAIT 5.
+
+PRINT "Launching!".
+STAGE.
+
+WAIT UNTIL STAGE:SOLIDFUEL < 0.1.
+WAIT 0.1.
+PRINT "Discarding boosters.".
+LOCK THROTTLE TO 1.0.
+STAGE.
+
+WAIT UNTIL FALSE.
