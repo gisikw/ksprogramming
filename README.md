@@ -18,6 +18,7 @@ Kerbal Archive Network (CKAN)](https://github.com/KSP-CKAN/CKAN):
 - kOS 0.17.2
 - RemoteTech 1.6.5
 - SmartParts 1.6.5
+- EnvironmentalVisualEnhancements-HR 7-4
 
 This playthrough has a particular emphasis on the [Kerbal Operating System
 (kOS)](https://github.com/KSP-KOS/KOS), which allows players to script the
