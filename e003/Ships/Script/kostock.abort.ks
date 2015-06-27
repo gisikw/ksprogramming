@@ -1,4 +1,4 @@
-// kOStock Abort v1.0.0
+// kOStok Abort v1.0.0
 // Kevin Gisi
 // http://youtube.com/cheerskevin
 
