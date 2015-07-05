@@ -14,11 +14,16 @@ episode, and can be found in the various directories.
 For this playthrough the following mods were installed using the [Comprehensive
 Kerbal Archive Network (CKAN)](https://github.com/KSP-CKAN/CKAN):
 
-- KerbalEngineerRedux 1.0.16.6
-- kOS 0.17.2
-- RemoteTech 1.6.5
+- KerbalEngineerRedux 1.0.17
+- kOS 0.17.3
+- RemoteTech 1.6.7
 - SmartParts 1.6.5
+
+The following are strictly visual mods:
 - EnvironmentalVisualEnhancements-HR 7-4
+  - Removed CityLights because of random glitches
+- PlanetShine 0.2.3.1
+- PlanetShine-Config-Default 0.2.3.1
 
 This playthrough has a particular emphasis on the [Kerbal Operating System
 (kOS)](https://github.com/KSP-KOS/KOS), which allows players to script the
