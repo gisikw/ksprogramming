@@ -18,12 +18,11 @@ Kerbal Archive Network (CKAN)](https://github.com/KSP-CKAN/CKAN):
 - kOS 0.17.3
 - RemoteTech 1.6.7
 - SmartParts 1.6.5
+- SurfaceLights 1.0
+- TAC Life Support 0.11.1.20
 
-The following are strictly visual mods:
-- EnvironmentalVisualEnhancements-HR 7-4
-  - Removed CityLights because of random glitches
-- PlanetShine 0.2.3.1
-- PlanetShine-Config-Default 0.2.3.1
+There are many additional visual enhancement mods used in the playthrough, but
+that should be enough to run the crafts in this repository.
 
 This playthrough has a particular emphasis on the [Kerbal Operating System
 (kOS)](https://github.com/KSP-KOS/KOS), which allows players to script the

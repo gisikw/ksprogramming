@@ -1,9 +1,15 @@
-// Generalized Boot Script v1.0.0
+// Generalized Boot Script v1.0.1
 // Kevin Gisi
 // http://youtube.com/cheerskevin
 
 // The ship will use updateScript to check for new commands from KSC.
 SET SHIP:CONTROL:PILOTMAINTHROTTLE TO 0.
+
+// Display a message
+FUNCTION NOTIFY {
+  PARAMETER message.
+  HUDTEXT("kOS: " + message, 5, 2, 50, WHITE, false).
+}
 
 // Detect whether a file exists on the specified volume
 FUNCTION HAS_FILE {
@@ -60,6 +66,16 @@ FUNCTION UPLOAD {
   IF HAS_FILE(name, 1) {
     COPY name TO 0.
   }
+}
+
+// Run a library, downloading it from KSC if necessary
+FUNCTION REQUIRE {
+  PARAMETER name.
+
+  IF NOT HAS_FILE(name, 1) { DOWNLOAD(name). }
+  RENAME name TO "tmp.exec.ks".
+  RUN tmp.exec.ks.
+  RENAME "tmp.exec.ks" TO name.
 }
 
 // THE ACTUAL BOOTUP PROCESS
