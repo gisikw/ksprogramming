@@ -1,6 +1,6 @@
 // Scientology v1.0.0
 // Kevin Gisi
-// http://youtube.com/cheerskevin
+// http://youtube.com/gisikw
 
 PRINT "Running program.".
 LOCK THROTTLE TO 1.0.

@@ -1,6 +1,6 @@
 // Orbit v1.0.0
 // Kevin Gisi
-// http://youtube.com/cheerskevin
+// http://youtube.com/gisikw
 
 // Note: Thermometer is bound to the LIGHTS action group.
 

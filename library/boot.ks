@@ -1,6 +1,6 @@
 // Generalized Boot Script v1.0.1
 // Kevin Gisi
-// http://youtube.com/cheerskevin
+// http://youtube.com/gisikw
 
 // The ship will use updateScript to check for new commands from KSC.
 SET SHIP:CONTROL:PILOTMAINTHROTTLE TO 0.

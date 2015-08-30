@@ -1,6 +1,6 @@
 // Execute Ascent Profile v1.0.0
 // Kevin Gisi
-// http://youtube.com/cheerskevin
+// http://youtube.com/gisikw
 
 FUNCTION EXECUTE_ASCENT_STEP {
   PARAMETER direction.

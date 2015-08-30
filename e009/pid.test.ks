@@ -1,6 +1,6 @@
 // PID Test v1.0.0
 // Kevin Gisi
-// http://youtube.com/cheerskevin
+// http://youtube.com/gisikw
 
 SET kP TO 0.01.
 SET kI TO 0.005.

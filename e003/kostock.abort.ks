@@ -1,6 +1,6 @@
 // kOStok Abort v1.0.0
 // Kevin Gisi
-// http://youtube.com/cheerskevin
+// http://youtube.com/gisikw
 
 NOTIFY("Abort program initiated").
 

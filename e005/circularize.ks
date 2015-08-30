@@ -1,6 +1,6 @@
 // Circularization Script v1.0.0
 // Kevin Gisi
-// http://youtube.com/cheerskevin
+// http://youtube.com/gisikw
 
 PARAMETER targetAltitude.
 PARAMETER referenceVessel.

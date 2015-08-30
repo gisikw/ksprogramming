@@ -1,6 +1,6 @@
 // OmniSat Boot v1.0.0
 // Kevin Gisi
-// http://youtube.com/cheerskevin
+// http://youtube.com/gisikw
 
 IF ALT:RADAR < 100 {
 

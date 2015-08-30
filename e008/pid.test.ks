@@ -1,6 +1,6 @@
 // Proportional Function v1.0.0
 // Kevin Gisi
-// http://youtube.com/cheerskevin
+// http://youtube.com/gisikw
 
 SET pScale TO 0.002.
 
