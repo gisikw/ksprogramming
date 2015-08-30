@@ -8,7 +8,7 @@ SET SHIP:CONTROL:PILOTMAINTHROTTLE TO 0.
 // Display a message
 FUNCTION NOTIFY {
   PARAMETER message.
-  HUDTEXT("kOS: " + message, 5, 2, 50, WHITE, false).
+  HUDTEXT("kOS: " + message, 5, 2, 50, YELLOW, false).
 }
 
 // Detect whether a file exists on the specified volume

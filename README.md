@@ -21,8 +21,8 @@ Kerbal Archive Network (CKAN)](https://github.com/KSP-CKAN/CKAN):
 - SurfaceLights 1.0
 - TAC Life Support 0.11.1.20
 
-There are many additional visual enhancement mods used in the playthrough, but
-that should be enough to run the crafts in this repository.
+There are several visual enhancement mods used in the playthrough, but the
+above list should be sufficient to run the crafts in this repository.
 
 This playthrough has a particular emphasis on the [Kerbal Operating System
 (kOS)](https://github.com/KSP-KOS/KOS), which allows players to script the
@@ -42,9 +42,26 @@ page](http://ksp-kos.github.io/KOS_DOC/).
 
 All of the craft files and kOS scripts can be found in episode directories for
 this repository. To use them in your own game, locate your Kerbal Space Program
-[root directory](http://wiki.kerbalspaceprogram.com/wiki/Root_directory), and
-copy the craft files into your savegame. The kOS scripts used will need to be
-placed in `Ships/Script` at the top of your root directory.
+[root directory](http://wiki.kerbalspaceprogram.com/wiki/Root_directory).
+
+Craft files should be placed in either `./saves/[YOURSAVEGAME]/Ships/VAB` or
+`./saves[YOURSAVEGAME]/Ships/SPH`, based on whether you wish to load them in
+the Vehicle Assembly Building or the Spaceplane Hanger, respectively.
+
+kOS script files should be placed into `./Ships/Script`, so that they can be
+accessed on the Archive Volume inside kOS.
+
+### Boot Scripts, Update Files, and Libraries
+
+In later episodes, much of the mission logic has been handled using libraries
+of shared utilities. To ensure that mission scripts are able to load these
+libraries, the contents of the `library` folder of this repository should also
+be copied into `./Ships/Script`.
+
+Many of the craft in the episodes have instructions automatically uploaded
+using the `boot.ks` script in the library directory. Mission scripts can then
+be directly uploaded to the vessel by naming them
+`./Ships/Script/[SHIPNAME].update.ks`
 
 ## Questions and Contributions
 

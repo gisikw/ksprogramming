@@ -4,7 +4,7 @@
 FUNCTION TLM_DELTAV {
   LIST ENGINES IN shipEngines.
   SET dryMass TO SHIP:MASS - ((SHIP:LIQUIDFUEL + SHIP:OXIDIZER) * 0.005).
-  RETURN shipEngines[0]:ISP * 9.81 * LN(SHIP:MASS / dryMass).
+  RETURN shipEngines[0]:ISP * 9.80665 * LN(SHIP:MASS / dryMass).
 }
 
 // Time to complete a maneuver
@@ -14,6 +14,21 @@ FUNCTION MNV_TIME {
   SET maxAccel TO SHIP:MAXTHRUST / SHIP:MASS.
   RETURN deltaV / maxAccel.
 }
+
+// Time to complete a maneuver
+// FUNCTION MNV_TIME {
+//   PARAMETER dV.
+//
+//   LIST ENGINES IN en.
+//
+//   LOCAL f IS en[0]:MAXTHRUST * 1000.  // Engine Thrust (kg * m/s²)
+//   LOCAL m IS SHIP:MASS * 1000.        // Starting mass (kg)
+//   LOCAL e IS CONSTANT():E.            // Base of natural log
+//   LOCAL p IS en[0]:ISP.               // Engine ISP (s)
+//   LOCAL g IS 9.80665.                 // Gravitational acceleration constant (m/s²)
+//
+//   RETURN g * m * p * (1 - e^(-dV/(g*p))) / f.
+// }
 
 // Delta v requirements for Hohmann Transfer
 FUNCTION MNV_HOHMANN_DV {
