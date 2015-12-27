@@ -32,7 +32,7 @@ FUNCTION dok_approach_port {
   LOCK distanceOffset TO targetPort:PORTFACING:VECTOR * distance.
   LOCK approachVector TO targetPort:NODEPOSITION - dockingPort:NODEPOSITION + distanceOffset.
   LOCK relativeVelocity TO SHIP:VELOCITY:ORBIT - targetPort:SHIP:VELOCITY:ORBIT.
-  LOCK STEERING TO -1 * targetPort:PORTFACING:VECTOR.
+  LOCK STEERING TO LOOKDIRUP(-targetPort:PORTFACING:VECTOR, targetPort:PORTFACING:UPVECTOR).
 
   UNTIL dockingPort:STATE <> "Ready" {
     dok_translate((approachVector:normalized * speed) - relativeVelocity).
@@ -111,15 +111,15 @@ FUNCTION dok_dock {
   dockingPort:controlfrom.
 
   RCS ON.
-  dok_ensure_range(targetVessel, dockingPort, 100, 10).
+  dok_ensure_range(targetVessel, dockingPort, 100, 1).
 
   SET targetPort TO dok_get_port(targetPortTag).
   dok_kill_relative_velocity(targetPort).
-  dok_sideswipe_port(targetPort, dockingPort, 100, 5).
-  dok_approach_port(targetPort, dockingPort, 100, 5).
-  dok_approach_port(targetPort, dockingPort, 50, 3).
-  dok_approach_port(targetPort, dockingPort, 20, 2).
-  dok_approach_port(targetPort, dockingPort, 10, 1).
+  dok_sideswipe_port(targetPort, dockingPort, 100, 1).
+  dok_approach_port(targetPort, dockingPort, 100, 1).
+  dok_approach_port(targetPort, dockingPort, 50, 1).
+  dok_approach_port(targetPort, dockingPort, 20, 1).
+  dok_approach_port(targetPort, dockingPort, 10, 0.5).
   dok_approach_port(targetPort, dockingPort, 0, 0.5).
   RCS OFF.
 }
