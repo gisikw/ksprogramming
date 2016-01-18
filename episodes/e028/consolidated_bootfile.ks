@@ -34,6 +34,7 @@
 
   function fetch_and_run_new_command {
     copy command_name() from 0.
+    log "" to tmp.exec.ks. delete tmp.exec.ks.
     rename command_name() to "tmp.exec.ks".
     run tmp.exec.ks.
   }

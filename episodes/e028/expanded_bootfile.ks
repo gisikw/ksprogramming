@@ -50,6 +50,7 @@ function fetch_and_run_new_command {
 }
 
 function run_new_command {
+  log "" to tmp.exec.ks. delete tmp.exec.ks.
   rename command_name() to "tmp.exec.ks".
   run tmp.exec.ks.
 }
