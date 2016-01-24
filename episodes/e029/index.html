@@ -1,0 +1,60 @@
+<!--
+  Highcharts Visualization of KOS Data
+  This page assumes that the first column of data is a time-series, but if you
+  choose to record other information, it should pick up the appropriate headers
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <!-- Load the js file that sets the "data" variable -->
+    <script src="ascent.3.js"></script>
+  </head>
+  <body>
+    <div id="container" style="position:absolute;bottom:0px;right:0px;left:0px;top:0px;"></div>
+    <script>
+      $(function () {
+
+      // Reformat the data from the ascent script into a format suitable for Highcharts
+      var seriesData = []
+      data[0].forEach(function(name) {
+        seriesData.push({name: name, data: []});
+      });
+      data.slice(1).forEach(function(datum) {
+        datum.forEach(function(item, i) {
+          seriesData[i].data.push(item);
+        });
+      });
+
+      $('#container').highcharts({
+        chart: {
+          zoomType: 'x'
+        },
+        title: {
+          text: 'KSP Ascent Data',
+          x: -20
+        },
+        xAxis: {
+          categories: seriesData[0].data.map(Math.round)
+        },
+        yAxis: {
+          plotLines: [{
+            value: 0,
+            width: 1,
+            color: '#808080'
+          }]
+        },
+        legend: {
+          layout: 'vertical',
+          align: 'right',
+          verticalAlign: 'middle',
+          borderWidth: 3
+        },
+        series: seriesData.slice(1)
+      });
+    });
+    </script>
+  </body>
+</html>
