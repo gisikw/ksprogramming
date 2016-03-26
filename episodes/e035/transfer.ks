@@ -38,11 +38,11 @@ function starting_population {
 
 function maneuver_fitness_fn {
   parameter chromosome.
-  local candidate is decode(chromosome)
+  local candidate is decode(chromosome).
 
-  local transfer_score.
-  local flyby_score.
-  local delta_v_score.
+  local transfer_score is 0.
+  local flyby_score is 0.
+  local delta_v_score is 0.
 
   if candidate:orbit:hasnextpatch and
      candidate:orbit:nextpatch:body = target_body {
