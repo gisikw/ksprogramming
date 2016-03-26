@@ -8,7 +8,7 @@
 ).
 
 function ga_seek {
-  parameter init. local ga.
+  parameter init. local ga is 0.
 
   prepare().
   evaluate().
@@ -26,6 +26,7 @@ function ga_seek {
     set ga to init:copy.
     if not ga:haskey("generation") set ga["generation"] to 0.
     if not ga:haskey("best_fitness") set ga["best_fitness"] to 0.
+    if not ga:haskey("best") set ga["best"] to 0.
   }
 
   function evaluate {
@@ -42,12 +43,12 @@ function ga_seek {
   }
 
   function done {
-    return ga:haskey("terminate_fn") and ga["terminate_fn"](ga).
+    return not ga:haskey("terminate_fn") or ga["terminate_fn"](ga).
   }
 
   function select {
-    local total_score is 0, selected is list(),
-          len is ga["population"]:length.
+    local total_score is 0. local selected is list().
+    local len is ga["population"]:length.
 
     for score in ga["fitness_scores"] set total_score to total_score + score.
 
@@ -65,10 +66,10 @@ function ga_seek {
     local children is list().
 
     for i in range(0, ga["population"]:length, 2) {
-      local a is ga["population"][i], b is ga["population"][i+1],
-            len is a:length, split is floor(random() * len).
+      local a is ga["population"][i]. local b is ga["population"][i+1].
+      local len is a:length. local split is floor(random() * len).
       set ga["population"][i] to
-        a:substring(0, split) + b:substring(split, len-split)).
+        a:substring(0, split) + b:substring(split, len-split).
       set ga["population"][i+1] to
         b:substring(0, split) + a:substring(split, len-split).
     }
@@ -77,7 +78,7 @@ function ga_seek {
   function mutate {
     local len is ga["population"][0]:length.
 
-    for i in range(0, ga["population"]) {
+    for i in range(0, ga["population"]:length) {
       for j in range(0, len) {
         if random() < 1 / len {
           local bit is ga["population"][i]:substring(j,1).

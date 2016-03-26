@@ -24,7 +24,7 @@ function to_float { parameter s. local exp is 0. local sig is 0.
   set exp to exp - 127.
   if exp=-127 set s_bits to "0"+s_bits.
   else set s_bits to "1"+s_bits.
-  for i in range(i,24) if s_bits:substring(i,1)="1" set sig to sig+2^(-i).
+  for i in range(0,24) if s_bits:substring(i,1)="1" set sig to sig+2^(-i).
   if s:substring(0,1)="1" set sig to -sig.
   return sig*2^exp.
 }
