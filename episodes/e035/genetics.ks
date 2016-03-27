@@ -33,7 +33,7 @@ function ga_seek {
     set ga["fitness_scores"] to list().
     for candidate in ga["population"] {
       local fitness is ga["fitness_fn"](candidate).
-      if fitness > ga["best_fitness"] {
+      if fitness >= ga["best_fitness"] {
         set ga["best_fitness"] to fitness.
         set ga["best"] to candidate.
       }
@@ -51,6 +51,7 @@ function ga_seek {
     local len is ga["population"]:length.
 
     for score in ga["fitness_scores"] set total_score to total_score + score.
+    if total_score = 0 set total_score to 1 / len.
 
     until selected:length = len {
       local i is floor(random()*len).

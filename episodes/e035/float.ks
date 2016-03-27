@@ -10,7 +10,6 @@
 // Usage: float["to_float"]("01000001010001100000000000000000") => 12.375
 //        float["to_bistring"](12.375) => "01000001010001100000000000000000"
 
-
 {global float is lex(
   "version", "0.1.0",
   "to_float", to_float@,
