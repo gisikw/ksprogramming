@@ -14,12 +14,12 @@ episode, and can be found in the various directories.
 For this playthrough the following mods were installed using the [Comprehensive
 Kerbal Archive Network (CKAN)](https://github.com/KSP-CKAN/CKAN):
 
-- KerbalEngineerRedux 1.0.17
-- kOS 0.17.3
-- RemoteTech 1.6.7
-- SmartParts 1.6.5
-- SurfaceLights 1.0
-- TAC Life Support 0.11.1.20
+- KerbalEngineerRedux
+- kOS
+- RemoteTech
+- SmartParts
+- SurfaceLights
+- TAC Life Support
 
 There are several visual enhancement mods used in the playthrough, but the
 above list should be sufficient to run the crafts in this repository.
