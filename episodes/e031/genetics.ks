@@ -5,6 +5,8 @@
 // Get the quote character
 set l to lexicon(). l:add("0",0).
 set q to l:dump:substring(23,1). unset l.
+// NOTE: The prior two lines can be replaced with the following in kOS > 0.19.3:
+// set q to char(34).
 
 // Recover any stored data
 log "" to ga_data.ks. run ga_data.ks.
