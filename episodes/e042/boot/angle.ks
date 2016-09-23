@@ -1,4 +1,3 @@
-// Vector Test
 function geo_offset {
   parameter geo, n_offset, e_offset.
   return latlng(
@@ -35,7 +34,6 @@ function get_plane {
   print "Angle: " + vang(slope, up:vector).
 }
 
-wait until rcs. rcs off.
 local x is 0. local y is 0.
 get_plane(x, y).
 on ag1 { set x to x + 1. get_plane(x, y). preserve. }

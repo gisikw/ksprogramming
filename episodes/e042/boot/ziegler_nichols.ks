@@ -1,5 +1,5 @@
 // Ziegler-Nichols Tuning Method
-local kU is 1.
+local kU is 6.
 print "Testing kU: " + kU.
 
 // Wait for user to hit RCS (and turn on debug fuel)
