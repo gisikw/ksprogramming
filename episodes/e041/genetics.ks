@@ -123,7 +123,7 @@
     parameter int, bits is "".
     until int = 0 {
       set bits to mod(int, 2) + bits.
-      set int to int / 2.
+      set int to floor(int / 2).
     }
     return bits:padleft(32):replace(" ","0").
   }
