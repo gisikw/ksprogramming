@@ -65,9 +65,8 @@ be directly uploaded to the vessel by naming them
 
 ## Questions and Contributions
 
+*Please note: many of the scripts here were valid with older versions of kOS
+and may include syntax that is no longer accurate.*
+
 If you have any questions about the project, please feel free to to submit an
 [issue](https://github.com/gisikw/ksprogramming/issues).
-
-As the series continues, we'll likely be adding some shared KerboScript
-libraries to ensure we don't need to rewrite everything from scratch. As we
-reach that point, pull requests are very much encouraged!
